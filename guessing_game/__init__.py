@@ -1,0 +1,1 @@
+"""Constructor for the project's `main` module."""
