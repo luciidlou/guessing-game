@@ -24,27 +24,33 @@ def play_game() -> None:
     print("Welcome to the guessing game!! Lets play!")
 
     while tries <= MAX_GUESSES:
-        print(f"You have {MAX_GUESSES - (tries - 1)} {'guesses' if tries != MAX_GUESSES else 'guess'} left.")
-        user_guess = input(prompt_user)
+        print(
+            f"You have {MAX_GUESSES - (tries - 1)} "
+            f"{'guesses' if tries != MAX_GUESSES else 'guess'} left."
+        )
+        guess = input(prompt_user)
 
         try:
-            user_guess = int(user_guess)
+            guess = int(guess)
         except ValueError as err:
-            print(f"ERROR: {err} \n`{user_guess}` is not a valid integer!")
+            print(f"ERROR: {err} \n`{guess}` is not a valid integer!")
             continue
 
-        if not LOW <= user_guess <= HIGH:
-            print(f"Your guess must be between the numbers {LOW} and {HIGH}! Please guess again...")
+        if not LOW <= guess <= HIGH:
+            print(
+                f"Your guess must be between the numbers {LOW} and {HIGH}! "
+                "Please guess again..."
+            )
             continue
 
         tries += 1
 
-        if user_guess == answer:
+        if guess == answer:
             print("You guessed the right number! ✅")
             if not try_again(play_game):
                 return
         else:
-            lower_higher: str = "lower..." if user_guess > answer else "higher..."
+            lower_higher: str = "lower..." if guess > answer else "higher..."
             print(lower_higher)
             continue
 
@@ -64,7 +70,10 @@ def try_again(func: Callable) -> Optional[bool]:
         user_input = input("Would you like to try again? (y/n)").lower()
 
         if user_input not in ("y", "n"):
-            print(f"{user_input} is not an accepted input. Please choose either 'y' or 'n'...")
+            print(
+                f"{user_input} is not an accepted input. "
+                "Please choose either 'y' or 'n'..."
+            )
             continue
 
         if user_input == "y":
