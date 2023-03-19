@@ -47,7 +47,7 @@ def play_game() -> None:
 
         if guess == answer:
             print("You guessed the right number! ✅")
-            if not try_again(play_game):
+            if not play_again(play_game):
                 return
         else:
             lower_higher: str = "lower..." if guess > answer else "higher..."
@@ -55,11 +55,11 @@ def play_game() -> None:
             continue
 
     print(f"You lost 😢 \nThe correct answer was {answer}")
-    try_again(play_game)
+    play_again(play_game)
 
 
-def try_again(func: Callable) -> Optional[bool]:
-    """Asks the user if they want to try again."""
+def play_again(func: Callable) -> Optional[bool]:
+    """Asks the user if they want to play again."""
 
     user_input: str
 
@@ -67,7 +67,7 @@ def try_again(func: Callable) -> Optional[bool]:
         raise TypeError(f"{func} is not of type `Callable`.")
 
     while True:
-        user_input = input("Would you like to try again? (y/n)").lower()
+        user_input = input("Would you like to play again? (y/n)").lower()
 
         if user_input not in ("y", "n"):
             print(
