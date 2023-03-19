@@ -9,13 +9,9 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ARG DEFAULT_LOW=1
-ARG DEFAULT_HIGH=20
-ARG DEFAULT_MAX_GUESSES=3
-
-ENV LOW ${DEFAULT_LOW}
-ENV HIGH ${DEFAULT_HIGH}
-ENV MAX_GUESSES ${DEFAULT_MAX_GUESSES}
+ENV LOW 1
+ENV HIGH 20
+ENV MAX_GUESSES 3
 
 # `CMD` executes when a container based on the image is started
 CMD ["python3", "guessing_game/main.py"]
