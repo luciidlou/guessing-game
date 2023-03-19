@@ -17,5 +17,5 @@ ENV LOW ${DEFAULT_LOW}
 ENV HIGH ${DEFAULT_HIGH}
 ENV MAX_GUESSES ${DEFAULT_MAX_GUESSES}
 
-# `CMD` executes when a container based on the image in started
+# `CMD` executes when a container based on the image is started
 CMD ["python3", "guessing_game/main.py"]
