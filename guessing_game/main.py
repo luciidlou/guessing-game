@@ -11,6 +11,7 @@ load_dotenv()
 
 # <editor-fold: Constants>
 
+USER: str = os.getenv("USER", "guest")
 LOW: int = int(os.getenv("LOW", "1"))
 HIGH: int = int(os.getenv("HIGH", "20"))
 MAX_GUESSES: int = int(os.getenv("MAX_GUESSES", "3"))
@@ -25,7 +26,7 @@ def play_game() -> None:
     answer: int = random.randint(LOW, HIGH)
     prompt_user: str = f"Please choose a number between {LOW} and {HIGH}: "
 
-    print("Welcome to the guessing game!! Lets play!")
+    print(f"Welcome, {USER}! Lets see if you can guess the right number!")
 
     while tries <= MAX_GUESSES:
         print(
