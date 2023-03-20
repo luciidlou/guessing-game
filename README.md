@@ -5,7 +5,6 @@ The goal behind this simple guessing game was to gain some familiarity with Dock
 
 I've come to realize that a big reason Docker is so appealing to the majority of developers is because of how lightweight it is and how much easier it is to share, deploy, and test applications across all types of different machines.
 ## Installation
----
 ### Docker
 1. Pull down the [latest docker image](https://hub.docker.com/repository/docker/luciidlou/guessing-game/general) from the Docker Hub
 ```
