@@ -1,4 +1,4 @@
-# Guess the Random Number! :bowtie:
+# Guess the Random Number! :grin:
 *An extremely simple number guessing game built with Python*
 ## About
 The goal behind this simple guessing game was to gain some familiarity with Docker and understand how it can be used to run applications in an isolated environment and share these applications and their environments with other developers!
@@ -10,7 +10,7 @@ I've come to realize that a big reason Docker is so appealing to the majority of
 ```
 docker pull luciidlou/guessing-game:latest
 ```
-2. Run the image in a container [^1]
+2. Run the image in a container
 ```
 docker run --rm --name guessing-game-app -it -e USER=<YOUR NAME HERE> -e LOW=<integer> -e HIGH=<integer> -e MAX_GUESSES=<integer> luciidlou/guessing-game:latest
 ```
