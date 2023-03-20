@@ -1,13 +1,13 @@
 FROM python:3.10.8
 
-WORKDIR /app
+WORKDIR /guessing-game
 
-COPY requirements.txt /app
+COPY requirements.txt /guessing-game
 
 # `RUN` executes when an image is created
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY . /guessing-game
 
 ARG USER="guest"
 
