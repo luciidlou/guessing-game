@@ -10,9 +10,18 @@ I've come to realize that a big reason Docker is so appealing to the majority of
 ```
 docker pull luciidlou/guessing-game:latest
 ```
-2. Run the image in a container
+2. Run the image in a container 
+- With the default values
 ```
-docker run --rm --name guessing-game-app -it -e USER=<YOUR NAME HERE> -e LOW=<integer> -e HIGH=<integer> -e MAX_GUESSES=<integer> luciidlou/guessing-game:latest
+docker run --rm --name guessing-game-app -it luciidlou/guessing-game:latest
+```
+- With custom values  
+`USER: str` (The name of the player. Defaults to `"guest"`)  
+`LOW: int` (The lowest number you can guess. Defaults to `1`)  
+`HIGH: int` (The highest number you can guess. Defaults to `20`)  
+`MAX_GUESSES: int` (total number of times the player can guess before losing. Defaults to `3`)
+```
+docker run --rm --name guessing-game-app -it -e USER=<"YOUR NAME HERE"> -e LOW=<integer> -e HIGH=<integer> -e MAX_GUESSES=<integer> luciidlou/guessing-game:latest
 ```
 ---
 ### Source Code
