@@ -19,7 +19,7 @@ docker run --rm --name guessing-game-app -it luciidlou/guessing-game:latest
 `USER: str` (The name of the player. Defaults to `"guest"`)  
 `LOW: int` (Lowest number the player can guess. Defaults to `1`)  
 `HIGH: int` (Highest number the player can guess. Defaults to `20`)  
-`MAX_GUESSES: int` (total number of times the player can guess before losing. Defaults to `3`)
+`MAX_GUESSES: int` (Total number of times the player can guess before losing. Defaults to `3`)
 ```
 docker run --rm --name guessing-game-app -it -e USER=<"YOUR NAME HERE"> -e LOW=<integer> -e HIGH=<integer> -e MAX_GUESSES=<integer> luciidlou/guessing-game:latest
 ```
