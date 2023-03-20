@@ -29,7 +29,7 @@ docker run --rm --name guessing-game-app -it -e USER=<"YOUR NAME HERE"> -e LOW=<
 ```
 git clone git@github.com:luciidlou/guessing-game.git
 ```
-2. Install dependencies (from project's root directory `/guessing-game`)
+2. Install dependencies (preferably within an isolated virtualenv)
 ```
 pip install -r requirements.txt
 ```
