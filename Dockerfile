@@ -9,9 +9,7 @@ RUN pip install -r requirements.txt
 
 COPY . /guessing-game
 
-ARG USER="guest"
-
-ENV USER=${USER}
+ENV USER="guest"
 ENV LOW=1
 ENV HIGH=20
 ENV MAX_GUESSES=3
